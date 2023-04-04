@@ -59,9 +59,7 @@ data.isnull().sum()
 data.dtypes
 
 sns.scatterplot(data['Postal Code'],data['Sales'])
-```
 
-```
 states=data.loc[:,["State","Sales"]] 
 states=states.groupby(by=["State"]).sum().sort_values(by="Sales") 
 plt.figure(figsize=(17,7)) 
@@ -70,9 +68,7 @@ plt.xticks(rotation = 90)
 plt.xlabel=("STATES")
 plt.ylabel=("SALES") 
 plt.show()
-```
 
-```
 states=data.loc[:,["State","Postal Code"]] 
 states=states.groupby(by=["State"]).sum().sort_values(by="Postal Code") 
 plt.figure(figsize=(17,7)) 
@@ -81,9 +77,7 @@ plt.xticks(rotation = 90)
 plt.xlabel=("STATES") 
 plt.ylabel=("Postal Code") 
 plt.show()
-```
 
-```
 states=data.loc[:,["Segment","Sales"]] 
 states=states.groupby(by=["Segment"]).sum().sort_values(by="Sales") 
 plt.figure(figsize=(10,7)) 
@@ -92,9 +86,7 @@ plt.xticks(rotation = 90)
 plt.xlabel=("SEGMENT") 
 plt.ylabel=("SALES") 
 plt.show()
-```
 
-```
 sns.barplot(data['Postal Code'],data['Ship Mode'],hue=data['Region'])
 
 data.corr()
